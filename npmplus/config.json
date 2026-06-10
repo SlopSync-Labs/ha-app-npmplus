@@ -30,20 +30,6 @@
   "map": [
     "ssl:rw"
   ],
-  "options": {
-    "timezone": "UTC",
-    "acme_email": ""
-  },
-  "schema": {
-    "timezone": {
-      "type": "string",
-      "description": "Timezone for NPMplus (e.g., UTC, America/New_York). REQUIRED.",
-      "default": "UTC"
-    },
-    "acme_email": {
-      "type": "string",
-      "description": "Email for Let's Encrypt certificate registration (optional but recommended)",
-      "default": ""
-    }
-  }
+  "options": {},
+  "schema": {}
 }
