@@ -1,8 +1,8 @@
 {
   "name": "NPMplus",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "slug": "npmplus",
-  "description": "Enhanced reverse proxy manager with HTTP/3, OIDC, mTLS, and advanced security features. Based on nginx-proxy-manager with AGPL-3.0 license.",
+  "description": "Enhanced reverse proxy manager with HTTP/3, OIDC, and advanced security features. Fork of Nginx Proxy Manager.",
   "url": "https://github.com/ZoeyVid/NPMplus",
   "arch": [
     "amd64",
@@ -17,45 +17,33 @@
   ],
   "ports": {
     "80/tcp": 80,
+    "81/tcp": 81,
     "443/tcp": 443,
     "443/udp": 443
   },
   "ports_description": {
     "80/tcp": "HTTP proxy traffic",
-    "443/tcp": "HTTPS proxy traffic & admin UI",
-    "443/udp": "HTTP/3 (QUIC) support"
+    "81/tcp": "Admin UI (HTTPS)",
+    "443/tcp": "HTTPS proxy traffic",
+    "443/udp": "HTTP/3 (QUIC)"
   },
   "map": [
     "ssl:rw"
   ],
   "options": {
     "timezone": "UTC",
-    "acme_email": "",
-    "npm_port": 81,
-    "disable_http": false
+    "acme_email": ""
   },
   "schema": {
     "timezone": {
       "type": "string",
-      "description": "Timezone for NPMplus (e.g., UTC, America/New_York, Europe/London). REQUIRED.",
+      "description": "Timezone for NPMplus (e.g., UTC, America/New_York). REQUIRED.",
       "default": "UTC"
     },
     "acme_email": {
       "type": "string",
-      "description": "Email address for ACME/Let's Encrypt certificate registration (optional but recommended)",
+      "description": "Email for Let's Encrypt certificate registration (optional but recommended)",
       "default": ""
-    },
-    "npm_port": {
-      "type": "integer",
-      "description": "Port for NPMplus admin interface (default: 81)",
-      "default": 81,
-      "minimum": 1024,
-      "maximum": 65535
-    },
-    "disable_http": {
-      "type": "boolean",
-      "description": "Disable HTTP (port 80) - require HTTPS only",
-      "default": false
     }
   }
 }
