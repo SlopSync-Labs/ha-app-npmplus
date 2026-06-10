@@ -1,5 +1,12 @@
 # NPMplus
 
+![Version][version-shield]
+![Project Stage][project-stage-shield]
+![Maintained][maintenance-shield]
+
+[![Community Forum][forum-shield]][forum]
+[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
+
 Enhanced reverse proxy manager with HTTP/3 (QUIC), OIDC, mTLS, and advanced security features.
 
 This Home Assistant app runs the latest [zoeyvid/npmplus](https://github.com/ZoeyVid/NPMplus) image,
@@ -89,3 +96,11 @@ This makes certificates accessible to other HA apps that map the `ssl` volume.
 NPMplus is distributed under the GNU Affero General Public License v3 (AGPL-3.0).
 By running this app, you agree to its license terms. See the
 [NPMplus repository](https://github.com/ZoeyVid/NPMplus/blob/main/LICENSE) for details.
+
+[version-shield]: https://img.shields.io/badge/version-0.1.1-blue.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2026.svg
+[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
+[forum]: https://community.home-assistant.io
+[buymeacoffee-shield]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg
+[buymeacoffee]: https://www.buymeacoffee.com/slopsynclabs

@@ -2,6 +2,16 @@
 
 All notable changes to the NPMplus Home Assistant app will be documented here.
 
+## [0.1.1] - 2026-06-10
+
+### Fixed
+
+- Fix redirect loop when accessing admin UI by changing webui from HTTPS to HTTP
+- Simplify config.json schema to match working app pattern
+- Simplify Dockerfile to use CMD pattern instead of cont-init.d
+
+---
+
 ## [0.1.0] - 2026-06-10
 
 ### Added
