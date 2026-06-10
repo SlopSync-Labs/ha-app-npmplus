@@ -2,6 +2,15 @@
 
 All notable changes to the NPMplus Home Assistant app will be documented here.
 
+## [0.1.2] - 2026-06-10
+
+### Fixed
+
+- Fix app shutdown error by using s6-overlay directly instead of run.sh wrapper
+- Proper signal handling for clean container shutdown
+
+---
+
 ## [0.1.1] - 2026-06-10
 
 ### Fixed

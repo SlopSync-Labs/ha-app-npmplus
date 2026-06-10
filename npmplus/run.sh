@@ -1,26 +1,9 @@
 #!/usr/bin/env bash
-set -e
-
-# Initialize directories
-mkdir -p /data /ssl/npmplus
-
-# Read Home Assistant options if they exist
-CONFIG_PATH=/data/options.json
-
-if [ -f "$CONFIG_PATH" ]; then
-  # Extract timezone
-  TZ=$(jq -r '.timezone // "UTC"' "$CONFIG_PATH" 2>/dev/null || echo "UTC")
-  export TZ
-
-  # Extract ACME email if provided
-  ACME_EMAIL=$(jq -r '.acme_email // empty' "$CONFIG_PATH" 2>/dev/null)
-  if [ -n "$ACME_EMAIL" ] && [ "$ACME_EMAIL" != "null" ]; then
-    export ACME_EMAIL
-  fi
-else
-  # No options file, use defaults
-  export TZ="UTC"
-fi
-
-# Start NPMplus init process
-exec /init
+# NOTE: This script is NOT the container entrypoint. NPMplus uses s6-overlay,
+# and /init must run as PID 1.
+#
+# Configuration logic lives in cont-init.d/01-ha-setup.sh, which s6 executes
+# during its normal init sequence before NPMplus services start.
+#
+# This file is kept as a placeholder per HA add-on repository convention.
+echo "See cont-init.d/01-ha-setup.sh for container startup logic."

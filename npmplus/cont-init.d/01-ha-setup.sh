@@ -9,7 +9,7 @@ mkdir -p /data /ssl/npmplus
 CONFIG_PATH=/data/options.json
 
 if [ -f "$CONFIG_PATH" ]; then
-  # Extract timezone (required)
+  # Extract timezone
   TZ=$(jq -r '.timezone // "UTC"' "$CONFIG_PATH" 2>/dev/null)
   if [ -n "$TZ" ] && [ "$TZ" != "null" ]; then
     export TZ
@@ -17,7 +17,7 @@ if [ -f "$CONFIG_PATH" ]; then
     export TZ="UTC"
   fi
 
-  # Extract ACME email (optional)
+  # Extract ACME email if provided
   ACME_EMAIL=$(jq -r '.acme_email // empty' "$CONFIG_PATH" 2>/dev/null)
   if [ -n "$ACME_EMAIL" ] && [ "$ACME_EMAIL" != "null" ]; then
     export ACME_EMAIL
