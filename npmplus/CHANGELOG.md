@@ -2,6 +2,16 @@
 
 All notable changes to the NPMplus Home Assistant app will be documented here.
 
+## [0.1.4] - 2026-06-11
+
+### Fixed
+
+- Add nginx configuration maps for X-Forwarded-Proto and X-Forwarded-Host headers
+- Improve proxy header handling to ensure headers are properly passed through nginx to backend
+- Enhanced support for external reverse proxy setups (e.g., NAS proxy servers)
+
+---
+
 ## [0.1.3] - 2026-06-11
 
 ### Fixed

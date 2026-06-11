@@ -1,6 +1,6 @@
 {
   "name": "NPMplus",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "slug": "npmplus",
   "description": "Enhanced reverse proxy manager with HTTP/3, OIDC, and advanced security features. Fork of Nginx Proxy Manager.",
   "url": "https://github.com/ZoeyVid/NPMplus",

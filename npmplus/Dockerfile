@@ -13,6 +13,9 @@ RUN mkdir -p /ssl/npmplus /app/config && \
 COPY cont-init.d/01-ha-setup.sh /etc/cont-init.d/01-ha-setup.sh
 RUN chmod +x /etc/cont-init.d/01-ha-setup.sh
 
+# Copy nginx proxy header configuration
+COPY nginx-proxy-trusted.conf /etc/nginx/conf.d/proxy-headers.conf
+
 EXPOSE 80 81 443
 
 # Do NOT override ENTRYPOINT — s6-overlay (/init) must run as PID 1
