@@ -26,3 +26,7 @@ else
   # No options file, use defaults
   export TZ="UTC"
 fi
+
+# Trust X-Forwarded-* headers from reverse proxies (e.g., NAS proxy)
+# This fixes redirect loops when accessed through external proxies
+export TRUST_PROXY=true

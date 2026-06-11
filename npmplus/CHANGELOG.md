@@ -2,6 +2,15 @@
 
 All notable changes to the NPMplus Home Assistant app will be documented here.
 
+## [0.1.3] - 2026-06-11
+
+### Fixed
+
+- Fix redirect loop when accessed through external reverse proxies by enabling proxy header trust
+- Allow X-Forwarded-Proto and X-Forwarded-Host headers from upstream proxies (e.g., NAS proxy servers)
+
+---
+
 ## [0.1.2] - 2026-06-10
 
 ### Fixed

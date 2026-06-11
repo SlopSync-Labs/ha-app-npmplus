@@ -97,7 +97,7 @@ NPMplus is distributed under the GNU Affero General Public License v3 (AGPL-3.0)
 By running this app, you agree to its license terms. See the
 [NPMplus repository](https://github.com/ZoeyVid/NPMplus/blob/main/LICENSE) for details.
 
-[version-shield]: https://img.shields.io/badge/version-0.1.2-blue.svg
+[version-shield]: https://img.shields.io/badge/version-0.1.3-blue.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2026.svg
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
